@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Afterlight Cinema</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="/">AFTERLIGHT / CINEMA</a><span>Local portfolio demo</span>
+    </header>
+    <main>
+      <p class="eyebrow">THE EVENING IS YOURS</p>
+      <h1>A little escape.<br />A bigger screen.</h1>
+      <p>
+        Choose a film and reserve your seat. Demo reservations only — no payment
+        or real cinema ticket.
+      </p>
+      <section id="auth">
+        <h2>Your cinema account</h2>
+        <form id="account">
+          <label
+            >Email<input
+              id="email"
+              type="email"
+              required
+              autocomplete="username" /></label
+          ><label
+            >Password<input
+              id="password"
+              type="password"
+              required
+              minlength="12"
+              maxlength="128"
+              autocomplete="current-password"
+          /></label>
+          <div>
+            <button name="action" value="login">Sign in</button
+            ><button name="action" value="register" class="outline">
+              Create account
+            </button>
+          </div>
+        </form>
+      </section>
+      <p id="identity"></p>
+      <button id="logout" hidden>Sign out</button>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section>
+        <h2>Now showing</h2>
+        <div id="movies" class="grid"></div>
+      </section>
+      <section id="seating" hidden>
+        <h2 id="film"></h2>
+        <p>Pick up to six seats • ₹200 each • grey seats are unavailable</p>
+        <div class="screen">SCREEN</div>
+        <div id="seats"></div>
+        <p id="total"></p>
+        <button id="reserve">Reserve selected seats (demo)</button>
+      </section>
+      <section>
+        <h2>Your reservations</h2>
+        <div id="bookings">Sign in to view your reservations.</div>
+      </section>
+    </main>
+    <footer>
+      Fictional programme. No card details, payment gateway or external
+      services.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #121b24;
+  color: #f7ecd8;
+  font:
+    16px system-ui,
+    sans-serif;
+}
+header,
+main,
+footer {
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #41505e;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+}
+header span,
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: #e2b06e;
+}
+h1 {
+  font:
+    clamp(3rem, 7vw, 6rem)/1.03 Georgia,
+    serif;
+  letter-spacing: -0.05em;
+  margin: 32px 0;
+}
+h2 {
+  font:
+    2rem Georgia,
+    serif;
+}
+section {
+  margin: 45px 0;
+}
+p {
+  line-height: 1.65;
+  color: #cad0d2;
+}
+form {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: end;
+}
+label {
+  display: grid;
+  gap: 8px;
+}
+input {
+  padding: 13px;
+  border: 1px solid #73818c;
+  border-radius: 6px;
+  background: #1e2c39;
+  color: white;
+  font: inherit;
+}
+button {
+  background: #ebbd7d;
+  color: #182631;
+  border: 1px solid #ebbd7d;
+  padding: 13px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.outline {
+  background: transparent;
+  color: #ebbd7d;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.movie {
+  background: linear-gradient(145deg, #344553, #1b2834);
+  padding: 28px;
+  border: 1px solid #53616a;
+  border-radius: 10px;
+}
+.movie:nth-child(2) {
+  background: linear-gradient(145deg, #735647, #2a2630);
+}
+.movie:nth-child(3) {
+  background: linear-gradient(145deg, #475a58, #20313e);
+}
+.movie .poster {
+  font:
+    6rem Georgia,
+    serif;
+  opacity: 0.35;
+}
+.screen {
+  text-align: center;
+  border-top: 4px solid #e2b06e;
+  padding: 15px;
+  margin-top: 30px;
+}
+#seats {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+#seats button {
+  padding: 10px 0;
+  background: #344553;
+  color: white;
+  border-color: #53616a;
+}
+#seats button[aria-pressed="true"] {
+  background: #ebbd7d;
+  color: #182631;
+}
+#message {
+  min-height: 28px;
+  color: #ffd498;
+}
+footer {
+  border-top: 1px solid #41505e;
+  font-size: 13px;
+}
+@media (max-width: 650px) {
+  header,
+  main,
+  footer {
+    padding: 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  header span {
+    display: none;
+  }
+  form,
+  label,
+  input {
+    width: 100%;
+  }
+  .movie .poster {
+    font-size: 4rem;
+  }
+}
